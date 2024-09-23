@@ -10,14 +10,20 @@
     "@types/node": "^16.18.108",
     "@types/react": "^18.3.8",
     "@types/react-dom": "^18.3.0",
+    "bootstrap": "^5.3.3",
+    "env-cmd": "^10.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
+    "react-table": "^7.8.0",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:dev": "env-cmd -f src/env/.env.development react-scripts start",
+    "start:prod": "env-cmd -f src/env/.env.prod react-scripts start",
+    "start:qa": "env-cmd -f src/env/.env.qa react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

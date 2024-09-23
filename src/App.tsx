@@ -1,26 +1,22 @@
+// App.tsx
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Datatable from './components/Datatable';
+import { User } from './types';
 
-function App() {
+const App: React.FC = () => {
+  const users: User[] = [
+    { id: 1, name: 'Soumya', age: 28, address: { at: 'ampor', po: 'kend', dist: 'Bhadrak' } },
+    { id: 2, name: 'Sandeep', age: 34, address: { at: 'chandaka', po: 'bbsr', dist: 'khordha' } },
+    { id: 3, name: 'Rohan', age: 45, address: { at: 'manjur', po: 'Jajpur Road', dist: 'Jajpur' } },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Data Table Example</h1>
+      <Datatable users={users} />
     </div>
   );
-}
+};
 
 export default App;
